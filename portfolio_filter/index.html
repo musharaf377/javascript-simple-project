@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio filter</title>
+
+    <style>
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 4em;
+            gap: 30px;
+        }
+
+        .filter-menu .btn {
+            font-size: 20px;
+            padding: 5px 8px;
+            margin: 5px;
+        }
+
+        .item-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .single-item {width: 250px;}
+
+        .single-item img {
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <section>
+       <div class="conatainer">
+        <div class="wrapper">
+            <div class="filter-menu">
+                <button class="btn" data-filter="all">All</button>
+                <button class="btn" data-filter="web">Web</button>
+                <button class="btn" data-filter="mobile">Mobile</button>
+                <button class="btn" data-filter="logo">Logo</button>
+                <button class="btn" data-filter="seo">Seo</button>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="single-item web">
+                    <img src="img/2.jpg" alt="">
+                </div>
+                <div class="single-item logo">
+                    <img src="img/3.jpg" alt="">
+                </div>
+                <div class="single-item seo">
+                    <img src="img/4.jpg" alt="">
+                </div>
+                <div class="single-item web">
+                    <img src="img/5.jpg" alt="">
+                </div>
+                <div class="single-item mobile">
+                    <img src="img/6.jpg seo" alt="">
+                </div>
+                <div class="single-item logo">
+                    <img src="img/7.jpg" alt="">
+                </div>
+                <div class="single-item mobile">
+                    <img src="img/8.jpg" alt="">
+                </div>
+                <div class="single-item logo">
+                    <img src="img/9.jpg" alt="">
+                </div>
+                <div class="single-item mobile">
+                    <img src="img/pexels-lisa-fotios-1092644.jpg" alt="">
+                </div>
+            </div>
+        </div>
+       </div>
+
+
+    </section>
+
+    <script type="text/javascript">
+
+      const buttons = document.querySelectorAll('.btn');
+      const items = document.querySelectorAll('.single-item');
+
+
+      buttons.forEach((button)=>{
+        button.addEventListener('click', (e)=> {
+            let filter = e.target.dataset.filter;
+
+            items.forEach((item)=> {
+                if(filter === 'all'){
+                    item.style.display = 'block';
+                }else{
+                    if(item.classList.contains(filter)){
+                        item.style.display = 'block';
+                    }else{
+                        item.style.display = 'none';
+                    }
+                }
+            })
+        })
+      })
+
+
+    </script>
+</body>
+</html>

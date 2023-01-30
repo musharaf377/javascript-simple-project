@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ddd;
+}
+.wrapper{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item{
+    width: 200px;
+    height: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.orange{
+    background: orange;
+}
+.blue{
+    background: blue;
+}
+.grey{
+    background: grey;
+}
+
+.display{
+    background-color: tomato;
+    height: 300px;
+    width: 500px;
+    margin: auto;
+}

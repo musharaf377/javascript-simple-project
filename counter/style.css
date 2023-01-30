@@ -1,0 +1,31 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background: teal;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.counter-num {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+.counter-title {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
